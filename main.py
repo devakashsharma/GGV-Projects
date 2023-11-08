@@ -9,7 +9,7 @@ classes = []
 with open("C:/Users/soula/Downloads/coco.names") as f:
   classes = f.read().splitlines()
 
-# and now will add our image path which is going to detect &change the path as per you want
+# and now will add our image path which is going to detect & change the path as per you want
 
 image = cv2.imread("path/to/your/image.jpg")
 # image = cv2.imread("path/to/your/image.jpg")
@@ -54,6 +54,8 @@ for output in Layeroutput:
             boxes.append([x, y, w, h])
             confidences.append(float(confidence))
             class_ids.append(class_id)
+
+# len(boxes)
 
 indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 font = cv2.FONT_HERSHEY_PLAIN
