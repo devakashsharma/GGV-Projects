@@ -33,33 +33,38 @@ boxes = []
 confidences = []
 class_ids = []
 
+# Get the image dimensions
 width, height = image.shape[1], image.shape[0]
 
-for output in Layeroutput:
-    for detection in output:
-        scores = detection[5:]
-        class_id = np.argmax(scores)
-        confidence = scores[class_id]
+# Process YOLO detections
+for detection in output:
+    scores = detection[5:]
+    class_id = np.argmax(scores)
+    confidence = scores[class_id]
 
-        if confidence > 0.7:
-            center_x = int(detection[0] * width)
-            center_y = int(detection[1] * height)
-            w = int(detection[2] * width)
-            h = int(detection[3] * height)
+    if confidence > 0.7:
+        center_x = int(detection[0] * width)
+        center_y = int(detection[1] * height)
+        w = int(detection[2] * width)
+        h = int(detection[3] * height)
 
-            x = int(center_x - w / 2)
-            y = int(center_y - h / 2)
+        x = int(center_x - w / 2)
+        y = int(center_y - h / 2)
 
-            boxes.append([x, y, w, h])
-            confidences.append(float(confidence))
-            class_ids.append(class_id)
+        boxes.append([x, y, w, h])
+        confidences.append(float(confidence))
+        class_ids.append(class_id)
 
 # len(boxes)
 
+# Apply non-maximum suppression to filter out overlapping detections
 indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
+
+# Set font and generate random colors for bounding boxes
 font = cv2.FONT_HERSHEY_PLAIN
 colors = np.random.uniform(0, 255, size = (len(boxes), 3))
 
+# Draw bounding boxes and labels on the image
 if len(indexes) > 0:
   for i in indexes.flatten():
     x,y,w,h = boxes[i]
@@ -72,6 +77,6 @@ if len(indexes) > 0:
     # cv2.putText(image, label + " " + confi, (x, y+20), font, (255, 255, 255), 2)
     cv2.putText(image, label + " " + confi, (x, y + 20), font, 1.0, (255, 255, 255), 2)
 
-# showing image
+# Display the image with bounding boxes
 plt.imshow(image)
 plt.show()
