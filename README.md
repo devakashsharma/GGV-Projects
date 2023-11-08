@@ -44,4 +44,4 @@ Now, Download the appropriate image for the detection
 
 ## Output:
 Here are the output images 
-1. ![Alt text](busPer.jpg)
+1. ![Alt text]("C:/Users/soula/Downloads/ObjectDetectionImage/busPer.jpg")
