@@ -2,7 +2,7 @@
 
 In this repository, I've gathered my collection of projects that are not just a project but a paradise for us. The creations of this repository are the result of pure dedication, boundless creativity, and the spirit of innovation. ❤️❤️
 
-# What to install?
+## What to install?
 To achive our goal we need to install
 1. Python
 ```
@@ -16,3 +16,5 @@ pip install opencv-python
 ```
 pip install matplotlib
 ```
+
+### fter the install of all required modules now we need to install Yolo V3 Weights, Configurations and classes names
