@@ -25,8 +25,6 @@ i = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
 
 yolo.setInput(blob)
 
-yolo.setInput(blob)
-
 output_layers_name = yolo.getUnconnectedOutLayersNames()
 Layeroutput = yolo.forward(output_layers_name)
 
@@ -58,4 +56,6 @@ for output in Layeroutput:
             confidences.append(float(confidence))
             class_ids.append(class_id)
 
-# len(boxes)
+indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
+font = cv2.FONT_HERSHEY_PLAIN
+colors = np.random.uniform(0, 255, size = (len(boxes), 3))
