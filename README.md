@@ -21,7 +21,7 @@ pip install matplotlib
 
 After the install of all required modules now we need to install YOLOv3 Weights, Configurations and classes names
 
-Vist this offical website of YOLO - https://pjreddie.com/yolo/
+Vist this offical website of YOLO - [CLICK HERE](https://pjreddie.com/yolo/)
 
 And you can you can any versions of it.
 I will choose YOLOv3-tiny for our project.
@@ -29,12 +29,12 @@ I will choose YOLOv3-tiny for our project.
 ### You only look once (YOLO)
 YOLOv3-tiny is often considered a good choice for beginners for the following reasons:
 
-Smaller Model Size: YOLOv3-tiny has a smaller model size (5.56 billion FLOPs) compared to the larger YOLOv3 models, making it easier to work with on less powerful hardware.
+**Smaller Model Size**: YOLOv3-tiny has a smaller model size (5.56 billion FLOPs) compared to the larger YOLOv3 models, making it easier to work with on less powerful hardware.
 
-Faster Inference: It has faster inference times due to its reduced size, which can be advantageous for real-time or embedded applications.
+**Faster Inference:** It has faster inference times due to its reduced size, which can be advantageous for real-time or embedded applications.
 
-Simplified Configuration: YOLOv3-tiny uses a simplified configuration file (220 lines) compared to the larger YOLOv3 models, which makes it easier to understand and modify.
+**Simplified Configuration:** YOLOv3-tiny uses a simplified configuration file (220 lines) compared to the larger YOLOv3 models, which makes it easier to understand and modify.
 
-Lighter Weight: The model weights are smaller in size, making them easier to download and work with.
+**Lighter Weight:** The model weights are smaller in size, making them easier to download and work with.
 
-Decent Performance: While it may not achieve the same high accuracy as larger YOLOv3 models, it still provides reasonable object detection performance.
+**Decent Performance:** While it may not achieve the same high accuracy as larger YOLOv3 models, it still provides reasonable object detection performance.
