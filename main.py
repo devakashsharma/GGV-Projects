@@ -9,3 +9,10 @@ classes = []
 with open("C:/Users/soula/Downloads/coco.names") as f:
   classes = f.read().splitlines()
 
+# and now will add our image path which is going to detect
+
+image = cv2.imread("C:/Users/soula/Downloads/bus2.jpg")
+# image = cv2.imread("C:/Users/soula/Downloads/smartBus.jpg")
+# image = cv2.imread("C:/Users/soula/Downloads/buses.jpg")
+# image = cv2.imread("C:/Users/soula/Downloads/car1.jpg")
+
