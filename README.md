@@ -19,12 +19,12 @@ pip install matplotlib
 
 ## Next:
 
-After the install of all required modules now we need to install YOLOv3 Weights, Configurations and classes names
+After the install of all required modules now we need to install YOLO Weights, Configurations and classes names
 
 Vist this offical website of YOLO - [CLICK HERE](https://pjreddie.com/yolo/)
 
-And you can you can any versions of it.
-I will choose YOLOv3-tiny for our project.
+And you can you can any versions of it. <br>
+I'll be using YOLOv3-tiny for our project.
 
 ### You only look once (YOLO)
 YOLOv3-tiny is often considered a good choice for beginners for the following reasons:
@@ -38,3 +38,6 @@ YOLOv3-tiny is often considered a good choice for beginners for the following re
 **Lighter Weight:** The model weights are smaller in size, making them easier to download and work with.
 
 **Decent Performance:** While it may not achieve the same high accuracy as larger YOLOv3 models, it still provides reasonable object detection performance.
+
+# Next:
+Now, Download the appropriate image for the detection
