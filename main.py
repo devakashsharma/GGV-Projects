@@ -71,3 +71,7 @@ if len(indexes) > 0:
     cv2.rectangle(image, (x, y), (x+w, y+h), color, 2)
     # cv2.putText(image, label + " " + confi, (x, y+20), font, (255, 255, 255), 2)
     cv2.putText(image, label + " " + confi, (x, y + 20), font, 1.0, (255, 255, 255), 2)
+
+# showing image
+plt.imshow(image)
+plt.show()
