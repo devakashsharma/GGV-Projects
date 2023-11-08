@@ -41,7 +41,3 @@ YOLOv3-tiny is often considered a good choice for beginners for the following re
 
 ## Next:
 Now, Download the appropriate image for the detection
-
-## Output:
-Here are the output images 
-1. ![Alt text]("C:/Users/soula/VS Code Files/GGV-Projects/assets/blueBus.jpg")
