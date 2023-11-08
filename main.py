@@ -9,13 +9,12 @@ classes = []
 with open("C:/Users/soula/Downloads/coco.names") as f:
   classes = f.read().splitlines()
 
-# and now will add our image path which is going to detect
+# and now will add our image path which is going to detect &change the path as per you want
 
-image = cv2.imread("C:/Users/soula/Downloads/bus2.jpg")
-# image = cv2.imread("C:/Users/soula/Downloads/smartBus.jpg")
-# image = cv2.imread("C:/Users/soula/Downloads/buses.jpg")
-# image = cv2.imread("C:/Users/soula/Downloads/car1.jpg")
-
+image = cv2.imread("path/to/your/image.jpg")
+# image = cv2.imread("path/to/your/image.jpg")
+# image = cv2.imread("path/to/your/image.jpg")
+# image = cv2.imread("path/to/your/image.jpg")
 
 blob = cv2.dnn.blobFromImage(image, 1/255, (320, 320), (0, 0, 0), swapRB = True, crop = False)
 
