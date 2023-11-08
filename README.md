@@ -5,5 +5,9 @@ In this repository, I've gathered my collection of projects that are not just a 
 # What to install?
 At first we need to install opencv by using command in our terminal
 bash
+
+```
 pip3 install opencv-python
 ```
+
+lkja
