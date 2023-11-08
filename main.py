@@ -59,3 +59,15 @@ for output in Layeroutput:
 indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 font = cv2.FONT_HERSHEY_PLAIN
 colors = np.random.uniform(0, 255, size = (len(boxes), 3))
+
+if len(indexes) > 0:
+  for i in indexes.flatten():
+    x,y,w,h = boxes[i]
+
+    label = str(classes[class_ids[i]])
+    confi = str(round(confidences[i], 2))
+    color = colors[i]
+
+    cv2.rectangle(image, (x, y), (x+w, y+h), color, 2)
+    # cv2.putText(image, label + " " + confi, (x, y+20), font, (255, 255, 255), 2)
+    cv2.putText(image, label + " " + confi, (x, y + 20), font, 1.0, (255, 255, 255), 2)
