@@ -17,15 +17,16 @@ pip install opencv-python
 pip install matplotlib
 ```
 
-### Next:
+## Next:
 
-After the install of all required modules now we need to install Yolo V3 Weights, Configurations and classes names
+After the install of all required modules now we need to install YOLOv3 Weights, Configurations and classes names
 
-Vist this offical website of yolo - https://pjreddie.com/yolo/
+Vist this offical website of YOLO - https://pjreddie.com/yolo/
 
 And you can you can any versions of it.
-I will choose Yolo v3-tiny for our project.
+I will choose YOLOv3-tiny for our project.
 
+### You only look once (YOLO)
 YOLOv3-tiny is often considered a good choice for beginners for the following reasons:
 
 Smaller Model Size: YOLOv3-tiny has a smaller model size (5.56 billion FLOPs) compared to the larger YOLOv3 models, making it easier to work with on less powerful hardware.
