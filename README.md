@@ -3,7 +3,7 @@
 In this repository, I've gathered my collection of projects that are not just a project but a paradise for us. The creations of this repository are the result of pure dedication, boundless creativity, and the spirit of innovation. ❤️❤️
 
 ## What to install?
-To achive our goal we need to install
+To achive our goal we need to install, we can install modules by using terminal
 1. Python
 ```
 pip install python
@@ -39,5 +39,9 @@ YOLOv3-tiny is often considered a good choice for beginners for the following re
 
 **Decent Performance:** While it may not achieve the same high accuracy as larger YOLOv3 models, it still provides reasonable object detection performance.
 
-# Next:
+## Next:
 Now, Download the appropriate image for the detection
+
+## Output:
+Here are the output images 
+1. ![Alt text](busPer.jpg)
