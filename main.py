@@ -1,35 +1,34 @@
-# At first we need to import some module
+# Import necessary modules
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Now we will set up yolo v3 and it's weight, cfg and we will also add coco name file which is objects names
+# Initialize YOLO v3 with its weights, configuration, and class names
 yolo = cv2.dnn.readNet("path/to/yolov3-tiny.weights", "path/to/yolov3-tiny.cfg")
 classes = []
 with open("path/to/coco.names") as f:
-  classes = f.read().splitlines()
+    classes = f.read().splitlines()
 
-# and now will add our image path which is going to detect & change the path as per you want
-
+# Load the image you want to detect (change the path as per your image)
 image = cv2.imread("path/to/your/image.jpg")
-# image = cv2.imread("path/to/your/image.jpg")
-# image = cv2.imread("path/to/your/image.jpg")
-# image = cv2.imread("path/to/your/image.jpg")
 
-blob = cv2.dnn.blobFromImage(image, 1/255, (320, 320), (0, 0, 0), swapRB = True, crop = False)
+# Prepare the image for YOLO input
+blob = cv2.dnn.blobFromImage(image, 1/255, (320, 320), (0, 0, 0), swapRB=True, crop=False)
 
-# Reshape & Convert from BGR to RGB
+# Reshape the blob and convert from BGR to RGB
 i = blob[0].reshape(320, 320, 3)
 i = cv2.cvtColor(i, cv2.COLOR_BGR2RGB)
 
+# Set the input for YOLO
 yolo.setInput(blob)
 
+# Get the output layer names
 output_layers_name = yolo.getUnconnectedOutLayersNames()
+
+# Forward pass through YOLO
 Layeroutput = yolo.forward(output_layers_name)
 
-boxes = []
-confidences = []
-class_ids = []
+# Initialize lists for bounding boxes, confidences, and class IDs
 boxes = []
 confidences = []
 class_ids = []
