@@ -29,7 +29,7 @@ I'll be using YOLOv3-tiny for our project.
 ### You only look once (YOLO)
 YOLOv3-tiny is often considered a good choice for beginners for the following reasons:
 
-**Smaller Model Size**: YOLOv3-tiny has a smaller model size (5.56 billion FLOPs) compared to the larger YOLOv3 models, making it easier to work with on less powerful hardware.
+**Smaller Model Size:** YOLOv3-tiny has a smaller model size (5.56 billion FLOPs) compared to the larger YOLOv3 models, making it easier to work with on less powerful hardware.
 
 **Faster Inference:** It has faster inference times due to its reduced size, which can be advantageous for real-time or embedded applications.
 
