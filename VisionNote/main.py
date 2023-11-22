@@ -7,10 +7,10 @@ import numpy as np
 yolo = cv2.dnn.readNet("path/to/yolov3-tiny.weights", "path/to/yolov3-tiny.cfg")
 classes = []
 with open("path/to/coco.names") as f:
-    classes = f.read().splitlines()
+  classes = f.read().splitlines()
 
 # Load the image you want to detect (change the path as per your image)
-image = cv2.imread("path/to/your/image.jpg")
+image = cv2.imread("path/to/smartBus.jpg")
 
 # Prepare the image for YOLO input
 blob = cv2.dnn.blobFromImage(image, 1/255, (320, 320), (0, 0, 0), swapRB=True, crop=False)
@@ -37,25 +37,24 @@ class_ids = []
 width, height = image.shape[1], image.shape[0]
 
 # Process YOLO detections
-for detection in output:
-    scores = detection[5:]
-    class_id = np.argmax(scores)
-    confidence = scores[class_id]
+for output in Layeroutput:
+    for detection in output:
+        scores = detection[5:]
+        class_id = np.argmax(scores)
+        confidence = scores[class_id]
 
-    if confidence > 0.7:
-        center_x = int(detection[0] * width)
-        center_y = int(detection[1] * height)
-        w = int(detection[2] * width)
-        h = int(detection[3] * height)
+        if confidence > 0.7:
+            center_x = int(detection[0] * width)
+            center_y = int(detection[1] * height)
+            w = int(detection[2] * width)
+            h = int(detection[3] * height)
 
-        x = int(center_x - w / 2)
-        y = int(center_y - h / 2)
+            x = int(center_x - w / 2)
+            y = int(center_y - h / 2)
 
-        boxes.append([x, y, w, h])
-        confidences.append(float(confidence))
-        class_ids.append(class_id)
-
-# len(boxes)
+            boxes.append([x, y, w, h])
+            confidences.append(float(confidence))
+            class_ids.append(class_id)
 
 # Apply non-maximum suppression to filter out overlapping detections
 indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
@@ -73,9 +72,12 @@ if len(indexes) > 0:
     confi = str(round(confidences[i], 2))
     color = colors[i]
 
-    cv2.rectangle(image, (x, y), (x+w, y+h), color, 2)
+    cv2.rectangle(image, (x, y), (x+w, y+h), color, 20)
     # cv2.putText(image, label + " " + confi, (x, y+20), font, (255, 255, 255), 2)
-    cv2.putText(image, label + " " + confi, (x, y + 20), font, 1.0, (255, 255, 255), 2)
+    cv2.putText(image, label + " " + confi, (x, y + 50), font, 3.0, (255, 255, 255), 2)
+
+# Converting BGR Image to RGB
+rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Display the image with bounding boxes
 plt.imshow(image)
