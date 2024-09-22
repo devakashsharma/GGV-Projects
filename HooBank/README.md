@@ -1,10 +1,9 @@
 # HooBank
 
-Visit our HooBank site - [Click Here](https://hoobank-teamshinobi.netlify.app/)
+<b><i>HooBank</i></b> is a modern payment solution offering a seamless banking experience. Built with Vite, React, and Tailwind CSS, it provides a fast, responsive interface for all devices, delivering efficient and visually appealing digital banking services.
 
-HooBank is the Modern Payment method which is more secure and reliable.
-
-I've made the UI of the HooBank using React and Tailwindcss
+#### <i> Visit our HooBank site - <u>[Click Here](https://hoobank-teamshinobi.netlify.app/)</u>
+</i>
 
 Here are some screenshot of the website:
 
